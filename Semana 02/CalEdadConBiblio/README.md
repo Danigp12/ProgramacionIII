@@ -1,0 +1,1 @@
+Este programa usa una libreria que tiene funciones para no cortar el programa si se introduce un dato erroneo por el usuario. En este caso, el programa avisa del fallo y vuelve a pedir al usuario introducir el dato correcto.
