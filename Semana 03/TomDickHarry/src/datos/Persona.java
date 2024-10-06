@@ -2,8 +2,8 @@ package datos;
 
 public class Persona {
     private String nombre = "Sin Nombre";
-    private double Peso = 0.0;
-    private double Talla = 0.0;
+    private double peso = 0.0;
+    private double talla = 0.0;
 
     public Persona(){
         //Construcctor vacio
@@ -19,16 +19,16 @@ public class Persona {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-public double getTalla() {
-    return Talla;
+public double gettalla() {
+    return talla;
 }
-public void setTalla(double talla) {
-    Talla = talla;
+public void settalla(double talla) {
+    this.talla = talla;
 }
-    public double getPeso() {
-        return Peso;
+    public double getpeso() {
+        return peso;
     }
-    public void setPeso(double peso) {
-        this.Peso = peso;
+    public void setpeso(double peso) {
+        this.peso = peso;
     }
 }

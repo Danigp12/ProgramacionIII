@@ -20,20 +20,20 @@ public class App {
         //String.format es lo mismo que printf.
         String promptPeso = String.format("Ingrese el peso de la persona %d: \n", index+1);
         double peso = Esdia.readDouble(promptPeso);
-        personas[index].setPeso(peso);
+        personas[index].setpeso(peso);
 
         String promptTalla = String.format("Ingrese la talla de la persona %d: \n", index+1);
         double talla = Esdia.readDouble(promptTalla);
-        personas[index].setTalla(talla);
+        personas[index].settalla(talla);
 
     }
   //Comparacion para mostrar el de mallor peso;
 
-  double mayor = personas[0].getPeso();
+  double mayor = personas[0].getpeso();
   int index = 0;
   for (int i = 0; i < personas.length; i++) {
-    if (mayor < personas[i].getPeso()) {
-        mayor = personas[i].getPeso();
+    if (mayor < personas[i].getpeso()) {
+        mayor = personas[i].getpeso();
         index = i;
   }
   }
@@ -41,13 +41,19 @@ public class App {
 System.out.printf("La persona con mayor peso es %s con " + mayor + " Kilos. \n", personas[index].getNombre()); 
 
 
-        //Calculo del IMC de cada persona introduda IMC = peso/talla^2.
+        //Ejercicio 3: Calculo del IMC de cada persona introduda IMC = peso/talla^2.
+        //Con Esdia usada antes podemos comprobar si los datos no son correctos.
+        //%.2f para que solo salgan 2 decimales en el IMC.
         Double IMC = 1.2;
         for (int i = 0; i < personas.length; i++) {
             
-            IMC = personas[i].getPeso() / Math.pow(personas[i].getTalla(), 2);
-            System.out.println("La IMC de " + personas[i].getNombre() + " es:" + IMC);
+            IMC = personas[i].getpeso() / Math.pow(personas[i].gettalla(), 2);
+            System.out.printf("La IMC de " + personas[i].getNombre() + " es: %.2f", IMC); 
         }
 
+
+
+
+        
     }
 }
