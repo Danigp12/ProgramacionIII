@@ -1,5 +1,5 @@
 import com.coti.tools.Esdia;
-import java.lang.Math;
+
 import datos.Persona;
 
 public class App {
@@ -42,13 +42,9 @@ System.out.printf("La persona con mayor peso es %s con " + mayor + " Kilos. \n",
 
 
         //Ejercicio 3: Calculo del IMC de cada persona introduda IMC = peso/talla^2.
-        //Con Esdia usada antes podemos comprobar si los datos no son correctos.
-        //%.2f para que solo salgan 2 decimales en el IMC.
-        Double IMC = 1.2;
         for (int i = 0; i < personas.length; i++) {
             
-            IMC = personas[i].getpeso() / Math.pow(personas[i].gettalla(), 2);
-            System.out.printf("La IMC de " + personas[i].getNombre() + " es: %.2f", IMC); 
+            System.out.printf("La IMC de " + personas[i].getNombre() + " es: %.2f \n", personas[i].getImc()); 
         }
 
 
