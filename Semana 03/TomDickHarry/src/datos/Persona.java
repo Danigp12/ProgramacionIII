@@ -1,3 +1,4 @@
+//Ejercicio 6: La clase persona en una carpeta a parte.
 package datos;
 import java.lang.Math;
 
