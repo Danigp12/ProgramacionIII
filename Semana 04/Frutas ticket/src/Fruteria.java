@@ -23,7 +23,7 @@ public class Fruteria {
         productos[index].setPriceKg(precio);
 
     }
-    System.out.printf("El producto 1 tiene el nombre " + productos[0].getNombre() + "y el precio con iva de " + productos[0].getPriceKg());
+    System.out.printf("El producto 1 tiene el nombre " + productos[0].getNombre() + "y el precio con iva de " + productos[0].getPriceKg() + "\n");
     boolean decision = true;
     int totalClientes = 0;
     while (decision == true) {
@@ -41,14 +41,25 @@ public class Fruteria {
         double cantidad = Esdia.readDouble(promcantidad);
         productos[index].setCantidad(cantidad);
        }
-       System.out.println("El precio de compra de las manzanas es: " + productos[0].getCantidad()*productos[0].getPriceKg());
+
+       //Imprimacion del ticket 47.
+       String euro = "\u20AC";
+       Double totalPrecio = 0.0;
+       Double totalTicket = 0.0;
+       String cliente = "Cliente";
+       System.out.printf("|" + "-".repeat(57) + "|\n" + "| %-49s " + "| %2d  |\n" + "|" + "-".repeat(57) + "|\n",cliente ,totalClientes);
 
 
-
+      for (int index = 0; index < productos.length; index++) {
+        totalPrecio = productos[index].getPriceKg() * productos[index].getCantidad();
+        System.out.printf("| %-10s " + "| %4.2f kg |" +" precio Kg con IVA %5.2f | %5.2f |\n", productos[index].getNombre(),productos[index].getCantidad() , productos[index].getPriceKg(), totalPrecio);
+        totalTicket += totalPrecio;
+    }
+    System.out.printf("|" + "-".repeat(57) + "|\n" + "| Total con IVA %5.2f %s" + " ".repeat(35) +"|\n" + "|" + "-".repeat(57) + "|\n", totalTicket, euro);  
 
     }
 
-
+    System.out.printf("El total de clientes de hoy es %d.", totalClientes);
 
     }
 }
