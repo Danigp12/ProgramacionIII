@@ -28,10 +28,11 @@ public class Fruteria {
     int totalClientes = 0;
     while (decision == true) {
         //Pregunta si se quiere dejar de hacer tikets
-        String prompdice = String.format("Si desea hacer otro ticket escriba 1, de lo contrario escriba 0.\n");
+        String prompdice = String.format("Si desea hacer un ticket escriba 1, de lo contrario escriba 0.\n");
         int dice = Esdia.readInt(prompdice, 0, 1);
         if (dice == 0) {
             decision = false;
+            break;
         }
     
         //Escritura del tiket.
@@ -52,7 +53,7 @@ public class Fruteria {
 
       for (int index = 0; index < productos.length; index++) {
         totalPrecio = productos[index].getPriceKg() * productos[index].getCantidad();
-        System.out.printf("| %-10s " + "| %4.2f kg |" +" precio Kg con IVA %5.2f | %5.2f |\n", productos[index].getNombre(),productos[index].getCantidad() , productos[index].getPriceKg(), totalPrecio);
+        System.out.printf("| %-11s " + "| %4.2f kg |" +" precio Kg con IVA %5.2f | %5.2f |\n", productos[index].getNombre(),productos[index].getCantidad() , productos[index].getPriceKg(), totalPrecio);
         totalTicket += totalPrecio;
     }
     System.out.printf("|" + "-".repeat(57) + "|\n" + "| Total con IVA %5.2f %s" + " ".repeat(35) +"|\n" + "|" + "-".repeat(57) + "|\n", totalTicket, euro);  
