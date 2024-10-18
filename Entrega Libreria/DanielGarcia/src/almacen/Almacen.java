@@ -4,7 +4,6 @@ package almacen;
 import libros.Libros;
 
 
-
 public class Almacen {
         private Libros[] almacen = new Libros[1];
 

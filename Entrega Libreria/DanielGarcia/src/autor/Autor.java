@@ -17,11 +17,17 @@ public class Autor {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public void setPremioPlaneta(boolean premio){
-        this.premioPlaneta = premio;
+    public void setPremioPlaneta(int premio){
+        if (premio == 1) {
+            this.premioPlaneta = true;
+        }
     }
-    public boolean getPremioPlaneta(){
-        return premioPlaneta;
+    public String getPremioPlaneta(){
+        if (this.premioPlaneta ==true) {
+            return "Sí";
+        } else {
+            return "No";
+        }
     }
 
 }
