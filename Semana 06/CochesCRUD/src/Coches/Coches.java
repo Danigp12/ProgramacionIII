@@ -41,6 +41,6 @@ public class Coches {
     }
 
     public String getCocheComoString(){
-        return "Marca: " + marca + ", Modelo: " + modelo + ", Color: " + color + ", Navegador: "+ navegador;
+        return "| Marca: " + marca + " | Modelo: " + modelo + " | Color: " + color + " | Navegador: "+ navegador + " |";
     }
 }

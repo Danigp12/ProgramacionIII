@@ -47,7 +47,7 @@ public class CochesCRUDHashMap {
         String marca = readString("Escriba la marca: ");
         String modelo = readString("Escriba el modelo: ");
         String color = readString("Escriba el Color: ");
-        boolean navegador = yesOrNo("Escriba yes si tiene navegador o no si no lo tiene");
+        boolean navegador = yesOrNo("Indique si tiene navegador: ");
 
             concesionario.put(matricula, new Coches(marca, modelo, color, navegador));
 
@@ -72,7 +72,7 @@ public class CochesCRUDHashMap {
             String nuevaMarca = readString("Escriba la nueva marca: ");
             String nuevoModelo = readString("Escriba el nuevo modelo: ");
             String nuevoColor = readString("Escriba el nuevo color: ");
-            boolean nuevoNavegador = yesOrNo("Indique si tiene naavegador o no (yes/no):") ;
+            boolean nuevoNavegador = yesOrNo("Indique si tiene navegador o no:") ;
 
             Coches nuevoCoche = new Coches(nuevaMarca, nuevoModelo, nuevoColor, nuevoNavegador);
 
@@ -94,7 +94,7 @@ public class CochesCRUDHashMap {
             String matricula = entry.getKey();
             Coches coche = entry.getValue();
 
-            System.out.println(String.format("Matrícula: %s , %s\n", matricula, coche.getCocheComoString()));
+            System.out.println(String.format("| Matrícula: %s %s\n", matricula, coche.getCocheComoString()));
         }
     }
 
