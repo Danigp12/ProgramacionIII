@@ -34,7 +34,7 @@ public class QuinielaController {
         return model.getPartidos();
     }
 
-    public void run(){
+    public void init(){
         this.view.showMenu();
     }
 }
