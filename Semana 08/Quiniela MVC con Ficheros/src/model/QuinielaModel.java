@@ -47,6 +47,7 @@ public int cargarPartidos(Path archivoPartidos){
     }
 
     public void introducirResultados(ArrayList<Partido> resultados){
+
         for(Partido part : resultados){
             if(part.getGolesLocal() > part.getGolesVisitante()){
                 part.setResultado("1");
@@ -59,5 +60,6 @@ public int cargarPartidos(Path archivoPartidos){
                 }
             }
         }
+        setPartidos(resultados);
     }
 }

@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 
 public class FacturasModel {
-private ArrayList<Factura> facturas;
+private ArrayList<Factura> facturas = new ArrayList<>();
+
+for
 
 
 
