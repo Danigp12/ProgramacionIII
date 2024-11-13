@@ -53,7 +53,7 @@ public class QuinielaView {
     }
 
     public void cargarPartidos(){
-        Path ruta = Paths.get(System.getProperty("user.home"), "Desktop", "partidos.txt");
+        Path ruta = Paths.get(System.getProperty("user.home"), "Desktop", "equipos.txt");
          controller.cargarPartidos(ruta);
     }
 
