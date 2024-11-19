@@ -6,7 +6,7 @@ public class Factura {
     private String concepto;
     private double descuento;
     private String fecha;
-    private double importe;
+    private double importe; //Importe sin IVA.
     private String nIF;
     private String nombreCliente;
     private String direccion;
