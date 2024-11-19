@@ -87,14 +87,15 @@ public void guardarFcturasHTML(){
 
         public List<String> valorMin(double valor) throws Exception{
 
-            List<String> facturas = cargarFacturasDesdeFichero();
+            List<String> facturas = Files.readAllLines(rutaArchivoSinBiblioteca); //Lee con UTF_8
+
 
             List<String> facturasMinimas = new ArrayList<>();
 
             //Transforma ell string en un objeto de tipo Factura para calcular el importe total y compararlo con el minimo
             for (String string : facturas) {
 
-                Factura tiket = Factura.getFacturaFromString(string, " ");
+                Factura tiket = Factura.getFacturaFromString(string, "\t");
 
                 double importe = tiket.getImporte();
                 double descuento = tiket.getDescuento();

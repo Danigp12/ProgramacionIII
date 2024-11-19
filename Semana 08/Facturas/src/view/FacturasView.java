@@ -75,8 +75,9 @@ public void showMenu() throws Exception{
         double importe = Esdia.readDouble("Introduzca el importe minimo de facturas (Precio con escuentos e IVA incluidos.)");
         List<String> facturasMinimas = controller.valorMinimo(importe);
 
+        System.out.println("Facturas Minimas:\n\n");
+
         for (String string : facturasMinimas) {
-            System.out.println("Facturas Minimas:\n\n");
             System.out.println(string + "\n");
         }
 
