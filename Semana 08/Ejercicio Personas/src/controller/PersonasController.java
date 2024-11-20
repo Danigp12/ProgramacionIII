@@ -32,5 +32,9 @@ public void init() throws Exception{
     view.showMenu();
 }
 
+public List<String> cargarPersonasFichero() throws Exception{
+    return model.cargarPersonasFichero();
+}
+
 
 }

@@ -16,6 +16,8 @@ public void setController(PersonasController controller){
 
 public void showMenu() throws Exception{
 
+    cargarPersonasFichero();
+
 boolean trigger = true;
 
 while (trigger) {
@@ -60,6 +62,10 @@ public void mostrarTabla() throws Exception{
 
 public void guardarPersonasTSV(){
     controller.guardarPersonasTSV();
+}
+
+public void cargarPersonasFichero() throws Exception{
+    controller.cargarPersonasFichero();
 }
 
 
