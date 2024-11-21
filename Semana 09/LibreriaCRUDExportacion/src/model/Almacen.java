@@ -1,37 +1,39 @@
 
 package model;
 
+import java.util.ArrayList;
 
 public class Almacen {
-  private Libros[] almacen = new Libros[1];
+  private ArrayList<Libros> almacen = new ArrayList<>(); 
   
-  public Almacen() {
-  }
 
+/* 
   public Almacen(int numeroDeLibros) {
       this.almacen = new Libros[numeroDeLibros];
   }
-
-  public Libros[] getAlmacen() {
+*/
+  public ArrayList<Libros> getAlmacen() {
       return almacen;
   }
 
   public void setAlmacen(int numeroDeLibros) {
-      this.almacen = new Libros[numeroDeLibros];
+      this.almacen = new ArrayList<>();;
   }
 
   //Método para agregar un libro nuevo.
-  public void agregarLibro(Libros libro) {
-      for (int i = 0; i < almacen.length; i++) {
-          if (almacen[i] == null) {
-              almacen[i] = libro;
-              break;
-          }
-      }
+  public void agregarLibro(Libros libro) { 
+      this.almacen.add(libro);
   }
 
   //Método para tomar un libro de la libreria.
   public Libros tomarLibro(int i){
-        return almacen[i];
+        return almacen.get(i);
   }
+
+  public void eliminarLibro(int posicion){
+    this.almacen.remove(posicion);
+  }
+public void modificarLibro(Libros libro, int posicion){
+  this.almacen.set(posicion, libro);
+}
 }

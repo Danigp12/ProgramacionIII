@@ -1,5 +1,4 @@
 package model;
-import model.Autor;
 
 public class Libros {
 
@@ -38,6 +37,15 @@ public class Libros {
     }
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public String getStringFromInstance(Libros libro, String delimitador){
+        Autor autor = libro.getAutor();
+
+        String cadena = libro.getTitulo() + delimitador + libro.getAnoPublicacion() + delimitador + autor.getNombre() + delimitador + autor.getApellidos()
+                         + delimitador + autor.getPremioPlaneta() + delimitador + libro.getNumDePag() + delimitador + libro.getPrecio();
+
+        return cadena;
     }
 
 }
