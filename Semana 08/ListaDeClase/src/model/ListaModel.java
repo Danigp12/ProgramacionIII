@@ -9,7 +9,7 @@ import java.util.List;
 public class ListaModel {
 
     private DatosDeAlumno alumno;
-    private ArrayList<DatosDeAlumno> listaAlumnos;
+    private ArrayList<DatosDeAlumno> listaAlumnos = new ArrayList<>();
 
     public ArrayList<DatosDeAlumno> getListaAlumnos() {
         return listaAlumnos;

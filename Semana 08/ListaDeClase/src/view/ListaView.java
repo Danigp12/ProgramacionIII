@@ -11,7 +11,7 @@ import model.Direccion;
 
 public class ListaView {
 
-    ListController controller = new ListController(null, null);
+    ListController controller;
 
 public void showMenu(){
 
