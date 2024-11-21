@@ -44,7 +44,7 @@ public class ListaModel {
 
     //Crea un archivo CSV con solo los datos personales.
     public void exportarDatosPersonalesCSV(){
- Path ruta = Paths.get(System.getProperty("user.home"),"Desktop","datosPersonales.csv");
+        Path ruta = Paths.get(System.getProperty("user.home"),"Desktop","datosPersonales.csv");
     try(PrintWriter writer = new PrintWriter(ruta.toFile())) {
     
         List<DatosDeAlumno> datos = this.getListaAlumnos();
