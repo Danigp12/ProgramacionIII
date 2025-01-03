@@ -39,13 +39,7 @@ public abstract class BuscadorPrimos {
     public void setCantidadpPrimos(int cantidadpPrimos) {
         this.cantidadpPrimos = cantidadpPrimos;
     }
-
-    void BuscadorPrimos(String nombre, int limite){
-        this.nombre = nombre;
-        this.limite = limite;
-    }
     
-
     abstract ArrayList<Integer> calcularPrimos();
 
     final void calcular(){
@@ -56,13 +50,6 @@ public abstract class BuscadorPrimos {
         this.tiempoRequerido = Duration.between(start, stop).toMillis();
         this.cantidadpPrimos = primos.size();
     }
-
-    /*public BuscadorPrimos(String nombre, int limite, long tiempoRequerido, int cantidadpPrimos) {
-        this.nombre = nombre;
-        this.limite = limite;
-        this.tiempoRequerido = tiempoRequerido;
-        this.cantidadpPrimos = cantidadpPrimos;
-    }*/
 
     public BuscadorPrimos() { 
         super();
