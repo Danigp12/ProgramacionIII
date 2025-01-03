@@ -12,15 +12,14 @@ public class App {
         boolean check = false;
         if(archivo instanceof Imprimible){
             ((Imprimible) archivo).imprimir();
-        }else{
             check = true;
         }
         if (archivo instanceof Compartible) {
             ((Compartible) archivo).compartir("WhatsApp");
-        } else {
             check = true;
         }
-        if (check) {
+
+        if (!check) {
             System.out.printf("El archivo %s no es ni Imprimible ni Compartible.\n", archivo.getName());
         }
 
