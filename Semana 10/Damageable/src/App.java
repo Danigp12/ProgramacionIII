@@ -11,7 +11,7 @@ public class App {
 
 
         for (Damageable damageable : objetos) {
-            damageable.applyDamage(1000);
+            damageable.applyDamage(100);
         }
 
     }
