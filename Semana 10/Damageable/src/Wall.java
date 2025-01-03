@@ -1,9 +1,7 @@
 ﻿public class Wall implements Damageable{
 
-    int durability;
+    private int durability;
     
-
-
     public int getDurability() {
         return durability;
     }
