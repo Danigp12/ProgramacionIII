@@ -42,7 +42,11 @@ public class App {
 
         //Ejercicio 2: Vamos a usar la clase Persona para crearla de manera errónea y lanzar un mensaje de error.
 
+        //Al crear la persona con un identificador negativo el sistema imprimirá un mensaje de error.
+        Persona person = new Persona(-2, "Pedro");
 
+        //Se mostrará un mensaje final para asegurar que todos los errores han sido manejados.
+        System.out.println("Programa ejecutado por completo.");
     
     }
 }
