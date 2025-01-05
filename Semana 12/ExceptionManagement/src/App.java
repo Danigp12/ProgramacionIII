@@ -24,15 +24,18 @@ public class App {
             System.out.println("Error aritmético: " + e.getMessage());
         }
 
-       /*  
+        
         ArrayList<Integer> ints = new ArrayList<>();
         ints.add(2);
         try{
+            if(ints.size()<3){
+                throw new MyCustomCheckedException("Index our of bounds.");
+            }
             ints.get(2);
-            throw new MyCustomCheckedException("Index our of bounders.");
         }catch(MyCustomCheckedException e){
             System.out.println("Error: " + e);
         }
-    */
+        System.out.println(2+2);
+    
     }
 }
